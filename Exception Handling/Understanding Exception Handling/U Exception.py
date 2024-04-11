@@ -37,45 +37,57 @@ Types of Errors that can occur:
     - RuntimeError : 
     - TypeError : 
     - NameError : 
+
+
 """
+import logging 
+
+# for the format of logging
+# level denotes the importance or level of severity? 
+# Update: Level denotes the level and above it that we want to be logged in the log file 
+logging.basicConfig(filename='errors.log', level = logging.INFO)
 
 try:
     file = open('demo.txt', 'rb')
 except(IOError, EOFError) as e:
-    print('Error error') 
+    logging.warning('I/O Error: %s', e)
+    
 
 # different blocks for each error 
 try:
     file2 = open('demo2.txt', 'wb')
 except IOError as e:
-    print('error ')
+    logging.warning('I/O Error: %s', e)
     raise e
 except EOFError as e:
-    print(e)
+    logging.warning('EOF Error: %s', e)
     raise e 
-except:
-    print('Another error')
+except Exception as e:
+    logging.warning('Other errors: %s', e)
+
 else: 
+    logging.info('No exceptions occured')
     print("This runs if no exception occurs,")
     #no exceptions are handled here
-    f = open('demo3.txt', 'rb')
+    # f = open('demo3.txt', 'rb')
     # -> This gives error and interrupts the flow of the program
-    print(f)
+    # print(f)
+
 
 finally:
-    print("Finally of second exceptional clause")
+    print("Finally of second exceptional clause\n")
+
 
 # trapping all exceptions 
 try: 
     file = open('t.txt', 'rb')
 except Exception as e:
-    # print(e)
-    # raise e
-    pass
+    logging.warning('Exception: %s',e)
 except:
     print('Other errors') 
 
 else: 
+    logging.info('No exceptions occured')
     # does not run since exception occurs above 
     print("This runs if no exception occurs,")
 finally: 

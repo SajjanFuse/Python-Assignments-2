@@ -1,0 +1,7 @@
+WARNING:root:I/O Error: [Errno 2] No such file or directory: 'demo.txt'
+WARNING:root:Exception: [Errno 2] No such file or directory: 't.txt'
+WARNING:root:I/O Error: [Errno 2] No such file or directory: 'demo.txt'
+WARNING:root:Exception: [Errno 2] No such file or directory: 't.txt'
+WARNING:root:I/O Error: [Errno 2] No such file or directory: 'demo.txt'
+INFO:root:No exceptions occured
+WARNING:root:Exception: [Errno 2] No such file or directory: 't.txt'
