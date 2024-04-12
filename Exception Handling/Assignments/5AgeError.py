@@ -1,6 +1,14 @@
 """
 Write a Python program that takes user input for age. Create a custom exception InvalidAgeError to handle cases where the age is below 0 or above 120.
 """
+
+import logging
+
+# Configure logger
+logging.basicConfig(filename='AgeProgram.log', level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+
 class InvalidAgeError(Exception):
     pass 
 
@@ -15,12 +23,12 @@ def validateAge(age):
             # print("Age cannot be less than 0")
             raise InvalidAgeError('Less than 0')
         else:
-            print("Age is validated")
+            logging.info("Age is validated")
+            
 
     except ValueError as e:
-        print(e)
-        print("Is the Value Error")
+        logging.error("ValueError occurred: %s", e)
     except InvalidAgeError as e:
-        print("Error occured as ", e)
+        logging.error("InvalidAgeError occurred: %s", e)
 
 validateAge(input("Enter any age"))

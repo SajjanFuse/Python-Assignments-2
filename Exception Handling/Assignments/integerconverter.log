@@ -1,0 +1,2 @@
+2024-04-12 09:33:24,562 - ERROR - Error converting input to integer: invalid literal for int() with base 10: '0.12'
+2024-04-12 09:34:07,668 - ERROR - Occured an error converting input to integer: invalid literal for int() with base 10: 'a'

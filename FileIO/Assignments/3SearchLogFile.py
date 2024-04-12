@@ -24,7 +24,7 @@ def search_log(logfile, keyword):
                 index+=1
 
     except FileNotFoundError as e :
-        logging.Warning(e)
+        logging.warning(e)
     if len(output_list)==0:
         print('No matches found')
     return output_list

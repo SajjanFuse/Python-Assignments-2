@@ -1,0 +1,2 @@
+ INFO - Csv Updated with names of people older than 18
+ ERROR - File not found: [Errno 2] No such file or directory: 'nodata.csv'

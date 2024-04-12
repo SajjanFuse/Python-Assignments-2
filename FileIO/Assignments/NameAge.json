@@ -1,14 +1,1 @@
-[
-  { "name": "John", "age": 30 },
-  { "name": "Alice", "age": 25 },
-  { "name": "Michael", "age": 28 },
-  { "name": "Emma", "age": 32 },
-  { "name": "William", "age": 31 },
-  { "name": "Sophia", "age": 29 },
-  { "name": "James", "age": 33 },
-  { "name": "Olivia", "age": 29 },
-  { "name": "Benjamin", "age": 34 },
-  { "name": "Charlotte", "age": 30 },
-  { "name": "Ram", "age": 30 },
-  { "name": "Sita", "age": 25 }
-]
+[{"name": "John", "age": 30}, {"name": "Alice", "age": 25}, {"name": "Michael", "age": 28}, {"name": "Emma", "age": 32}, {"name": "William", "age": 31}, {"name": "Sophia", "age": 29}, {"name": "James", "age": 33}, {"name": "Olivia", "age": 29}, {"name": "Benjamin", "age": 34}, {"name": "Charlotte", "age": 30}, {"name": "Ram", "age": 30}, {"name": "Sita", "age": 25}, {"name": "Ram", "age": 30}, {"name": "Sita", "age": 25}, {"name": "Ram", "age": 30}, {"name": "Sita", "age": 25}]

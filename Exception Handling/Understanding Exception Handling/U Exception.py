@@ -50,20 +50,20 @@ logging.basicConfig(filename='errors.log', level = logging.INFO)
 try:
     file = open('demo.txt', 'rb')
 except(IOError, EOFError) as e:
-    logging.warning('I/O Error: %s', e)
+    logging.error('I/O Error: %s', e)
     
 
 # different blocks for each error 
 try:
     file2 = open('demo2.txt', 'wb')
 except IOError as e:
-    logging.warning('I/O Error: %s', e)
+    logging.error('I/O Error: %s', e)
     raise e
 except EOFError as e:
-    logging.warning('EOF Error: %s', e)
+    logging.error('EOF Error: %s', e)
     raise e 
 except Exception as e:
-    logging.warning('Other errors: %s', e)
+    logging.error('Other errors: %s', e)
 
 else: 
     logging.info('No exceptions occured')
@@ -82,7 +82,7 @@ finally:
 try: 
     file = open('t.txt', 'rb')
 except Exception as e:
-    logging.warning('Exception: %s',e)
+    logging.error('Exception: %s',e)
 except:
     print('Other errors') 
 

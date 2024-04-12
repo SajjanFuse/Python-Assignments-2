@@ -4,25 +4,31 @@ Create a function add_to_json that takes a filename and a dictionary as input. T
 """
 # for json
 import json 
+import logging 
+
+logging.basicConfig(filename='filehandling.log', level = logging.INFO)
+
 
 def add_to_json(filename, dict_):    
     try:
         # r+ for read and write both? 
         with open(filename, 'r+') as file:
             data = json.load(file)
-            print(f'Data before appending is {data}')
+            
             for d in dict_:
                 data.append(d)
-            print(data)
+            
             # to go to the beginning portion of the json file
             # for copying the new appended data from the top
             file.seek(0)
 
             json.dump(data, file)
             file.truncate()
+
+        logging.info(f'Updated {filename} created!')
     
     except FileNotFoundError as e:
-        print(e)
+        logging.debug(f'{e}')
         with open(filename, 'w') as file:
             file.dump(dict_, file)
 

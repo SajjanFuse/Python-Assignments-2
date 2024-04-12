@@ -1,0 +1,4 @@
+2024-04-12 09:38:21,456 - ERROR - InvalidAgeError occurred: Higher than 120
+2024-04-12 09:38:33,793 - ERROR - InvalidAgeError occurred: Higher than 120
+2024-04-12 09:38:36,154 - INFO - Age is validated
+2024-04-12 09:38:44,155 - ERROR - InvalidAgeError occurred: Less than 0
